@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+<svg display="none">
+    <symbol id="arrow-icon" width="63" height="65" viewBox="0 0 63 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M55.5565 64.4004L23.6396 32.4835L55.5565 0.400391L62.5384 7.21598L37.2708 32.4835L62.5384 57.5848L55.5565 64.4004Z"
+              fill="#67CDFD"/>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M32.6171 64.4004L0.700195 32.4835L32.6171 0.400391L39.5988 7.21598L14.3314 32.4835L39.5988 57.5848L32.6171 64.4004Z"
+              fill="#727270"/>
+    </symbol>
+</svg>
+
+<div class="slider center">
+    <div class="full-size__container">
+        <svg class="full-size__close-button" width="29" height="29" viewBox="0 0 29 29" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.99976" y="0.455811" width="36" height="4" rx="2" transform="rotate(45 2.99976 0.455811)"
+                  fill="#1B2A43"/>
+            <rect x="-6.10352e-05" y="25.4558" width="36" height="4" rx="2" transform="rotate(-45 -6.10352e-05 25.4558)"
+                  fill="#1B2A43"/>
+        </svg>
+        <img class="full-size__img">
+    </div>
+    <div class="slider-content">
+        <button class="arrow-button arrow-button_prev">
+            <svg class="arrow-button__icon">
+                <use xlink:href="#arrow-icon"></use>
+            </svg>
+        </button>
+        <div class="slide-container">
+            <img class="slide" src="static/img/cat_1-min.jpg" alt="cat1">
+            <img class="slide" src="static/img/cat_2-min.jpg" alt="cat2">
+            <img class="slide" src="static/img/cat_3-min.jpg" alt="cat3">
+            <img class="slide" src="static/img/cat_4-min.jpg" alt="cat4">
+        </div>
+        <button class="arrow-button arrow-button_next">
+            <svg class="arrow-button__icon">
+                <use xlink:href="#arrow-icon"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+</body>
+</html>

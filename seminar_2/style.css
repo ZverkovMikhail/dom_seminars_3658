@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-left: calc(50% - 300px);
+    padding-right: calc(50% - 300px);
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    padding: 32px;
+}
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    text-align: center;
+    margin-bottom: 16px;
+}
+.active {
+    color: #ff0000;
+}
+input {
+    display: block;
+}
+
+
+button {
+    border-radius: 8px;
+    background-color: #b93d3d;
+    color: #efefef;
+    border: 1px solid #8a2424;
+    margin: 16px;
+    padding: 8px 24px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    background-color: #efefef;
+}
+
+.product__title {
+    text-align: center;
+}
+
+.form {
+    position: relative;
+}
+
+.msg-box {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    color: #980000;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+}
+
+.review-block {
+    overflow: hidden;
+    height: 0;
+}
+
+.opener {
+    visibility: hidden;
+}
+.opener-label{
+    display: inline-block;
+    height: 16px;
+    width: 100%;
+}
+.opener-label:before{
+    content: 'Показать отзывы';
+}
+
+.opener:checked ~ .review-block {
+    height: auto;
+}
+.opener:checked ~ .opener-label:before {
+    content: 'Скрыть отзывы';
+}
+
+.remove-button {
+    background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2em;
+}
+
+.modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 50%;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #efefef;
+    transition: all 0.2s ease-in;
+}
+.modal_opened{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    transition: all 0.6s ease-out;
+}
